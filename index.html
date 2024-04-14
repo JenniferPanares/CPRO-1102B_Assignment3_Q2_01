@@ -19,22 +19,23 @@
     <script>
       $(document).ready(function() {
 	  $.get("got.xml", function(data) {
-		$(data).find("character").each(function() {
-		  var xmlDoc = $(this);
-		  var name = xmlDoc.find("name").text();
-		  var title = xmlDoc.find("title").text();
-		  var bio = xmlDoc.find("bio").text();
-
-		  var characterHtml = '<div class="character">' +
-							  '<h3>' + name + '</h3>' +
-							  '<h4>' + title + '</h4>' +
-							  '<p>' + bio + '</p>' +
-							  '</div>';
-
-		  $("#team").append(characterHtml);
-		});
+	    $(data).find("character").each(function() {
+	      var xmlDoc = $(this);
+	      var name = xmlDoc.find("name").text();
+	      var title = xmlDoc.find("title").text();
+	      var bio = xmlDoc.find("bio").text();
+	
+	      var characterHtml = '<div class="character">' +
+	                          '<h3>' + name + '</h3>' +
+	                          '<h4>' + title + '</h4>' +
+	                          '<p>' + bio + '</p>' +
+	                          '</div>';
+	
+	      $("#got").append(characterHtml);
+	    });
 	  });
 	});
+
 
     </script>
   </div>
