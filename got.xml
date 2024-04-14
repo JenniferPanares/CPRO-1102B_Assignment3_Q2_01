@@ -6,5 +6,9 @@
 		<bio>Queen Daenerys I Targaryen, also known as Daenerys Stormborn, and affectionately known as Dany, was the only daughter of King Aerys II Targaryen and Queen Rhaella, and the younger sister of Rhaegar and Viserys Targaryen.
 		</bio>
 	</character>
-	
+	<character>
+		<name>Jon Snow</name>
+		<title>Main Character</title>
+		<bio>Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone</bio>
+	</character>
 </got>
