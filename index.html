@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- jQuery version -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>  
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS2a_index.css" />
+</head>
+<body>
+  <div class="custom-container-fluid">
+    <!-- XML file with .xml as its extension -->
+    <h2>Game of Thrones</h2>
+    <div id="got"></div>
+    
+    <script>
+      $(document).ready(function() {
+        $.get("got.xml", function(data) {
+          $(data).find("got").each(function() { 
+            var xmlDoc = $(this);
+            $("#got").append("<h3>" + xmlDoc.find("name").text() + "</h3>");
+            $("#got").append("<p>" + xmlDoc.find("title").text() + "</p>"); 
+            $("#got").append("<p>" + xmlDoc.find("bio").text() + "</p><br>");
+          });
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body {
+      background-image: url('got.jpg'); 
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      background-position: center; 
+    }
+
+.custom-container-fluid {
+  border: 3px solid #CE5200;   
+  margin: 10%;
+  padding: 1em; 
+  box-shadow: 5px 5px;
+  background-color: white;
+
+}
