@@ -18,15 +18,24 @@
     
     <script>
       $(document).ready(function() {
-        $.get("got.xml", function(data) {
-          $(data).find("got").each(function() { 
-            var xmlDoc = $(this);
-            $("#got").append("<h3>" + xmlDoc.find("name").text() + "</h3>");
-            $("#got").append("<p>" + xmlDoc.find("title").text() + "</p>"); 
-            $("#got").append("<p>" + xmlDoc.find("bio").text() + "</p><br>");
-          });
-        });
-      });
+	  $.get("got.xml", function(data) {
+		$(data).find("character").each(function() {
+		  var xmlDoc = $(this);
+		  var name = xmlDoc.find("name").text();
+		  var title = xmlDoc.find("title").text();
+		  var bio = xmlDoc.find("bio").text();
+
+		  var characterHtml = '<div class="character">' +
+							  '<h3>' + name + '</h3>' +
+							  '<h4>' + title + '</h4>' +
+							  '<p>' + bio + '</p>' +
+							  '</div>';
+
+		  $("#team").append(characterHtml);
+		});
+	  });
+	});
+
     </script>
   </div>
 </body>
